@@ -1,0 +1,32 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"NonFungibleTicket": "./cadence/contracts/NonFungibleTicket.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "e61fd9cbcf7d7d0918c5d02f79c9be08717ca82b5e7bd8c151e009eeb384bb78"
+		},
+		"attendee-account": {
+			"address": "01cf0e2f2f715450",
+			"keys": "55ac50f694904fba405907aa3d264dea39fbe3aea0a305e87912570da9045f59"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": ["NonFungibleTicket"]
+		}
+		
+	}
+}
